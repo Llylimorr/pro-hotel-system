@@ -1,56 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel System - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" defer></script>
-</head>
-<body class="bg-gray-100 font-sans">
-
-    <aside id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white shadow-xl z-50 transition-transform -translate-x-full md:translate-x-0">
-        <div class="p-6">
-            <h1 class="text-3xl font-bold text-indigo-400">🏨 HotelPro</h1>
-            <p class="text-sm text-gray-400 mt-1">Admin Panel</p>
-        </div>
-        <nav class="mt-8">
-            <a href="index.html" class="flex items-center p-4 text-gray-100 hover:bg-indigo-600 hover:text-white transition duration-200">
-                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-10v10a1 1 0 001 1h3m-6 0a1 1 0 001-1v-4a1 1 0 00-1-1h-2a1 1 0 00-1 1v4a1 1 0 001 1z"></path></svg>
-                Dashboard
-            </a>
-            <a href="booking.html" class="flex items-center p-4 text-gray-400 hover:bg-gray-700 transition duration-200">
-                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                Bookings
-            </a>
-        </nav>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <aside
+      id="sidebar"
+      class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white shadow-xl z-50 transition-transform -translate-x-full md:translate-x-0"
+    >
+      <div class="p-6">
+        <h1 class="text-3xl font-bold text-indigo-400">🏨 HotelPro</h1>
+        <p class="text-sm text-gray-400 mt-1">Admin Panel</p>
+      </div>
+      <nav class="mt-8">
+        <a
+          href="index.html"
+          class="flex items-center p-4 text-gray-100 hover:bg-indigo-600 hover:text-white transition duration-200"
+        >
+          <svg
+            class="w-5 h-5 mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-10v10a1 1 0 001 1h3m-6 0a1 1 0 001-1v-4a1 1 0 00-1-1h-2a1 1 0 00-1 1v4a1 1 0 001 1z"
+            ></path>
+          </svg>
+          Dashboard
+        </a>
+        <a
+          href="booking.html"
+          class="flex items-center p-4 text-gray-400 hover:bg-gray-700 transition duration-200"
+        >
+          <svg
+            class="w-5 h-5 mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+          Bookings
+        </a>
+      </nav>
     </aside>
 
     <div id="content" class="ml-0 md:ml-64 p-8">
-        <header class="bg-white shadow rounded-lg p-4 mb-8 flex justify-between items-center">
-            <h2 class="text-2xl font-semibold text-gray-800">System Dashboard</h2>
-             <button id="menu-toggle" class="md:hidden text-gray-500 hover:text-gray-700">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </header>
+      <header
+        class="bg-white shadow rounded-lg p-4 mb-8 flex justify-between items-center"
+      >
+        <h2 class="text-2xl font-semibold text-gray-800">System Dashboard</h2>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-500 hover:text-gray-700"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </header>
 
-        <main class="bg-white p-6 rounded-lg shadow">
-            <h3 class="text-xl font-bold mb-4 text-indigo-500">Welcome to the Hotel Management System</h3>
-            <p>This is the base structure. We will add features in separate branches.</p>
-        </main>
+      <main class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-4 text-indigo-500">
+          Welcome to the Hotel Management System
+        </h3>
+        <p>
+          This is the base structure. We will add features in separate branches.
+        </p>
+        <div>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+          vero, nobis perferendis quidem ipsum, inventore molestias, dolorem
+          numquam veritatis ut suscipit ullam voluptatum. Voluptas beatae
+          architecto eum, accusamus sint, porro commodi doloremque deserunt
+          atque doloribus reprehenderit, aliquid obcaecati voluptate excepturi
+          laudantium corrupti itaque nisi ad? Perspiciatis nostrum dolor quas
+          esse ullam, obcaecati voluptate consequatur quis vitae nulla veniam
+          aliquam pariatur saepe dolores iusto libero quae repudiandae ex earum
+          ipsam possimus quidem animi voluptates suscipit. Officia veritatis
+          rerum aut praesentium mollitia. Consectetur cupiditate ullam enim quod
+          vero unde tempore minima, aperiam ab dicta, fugiat quis totam iste,
+          delectus laborum cumque accusamus!
+        </div>
+      </main>
     </div>
 
     <script>
-        // Simple JS for the mobile sidebar toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-        const content = document.getElementById('content');
+      // Simple JS for the mobile sidebar toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("content");
 
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('-translate-x-full');
-            content.classList.toggle('ml-0');
-            content.classList.toggle('md:ml-64');
-        });
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+        content.classList.toggle("ml-0");
+        content.classList.toggle("md:ml-64");
+      });
     </script>
-</body>
+  </body>
 </html>
