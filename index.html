@@ -35,12 +35,51 @@
         </header>
 
         <main class="bg-white p-6 rounded-lg shadow">
-            <h3 class="text-xl font-bold mb-4 text-indigo-500">Welcome to the Hotel Management System</h3>
-            <p>This is the base structure. We will add features in separate branches.</p>
+            <h3 class="text-xl font-bold mb-6 text-indigo-500">Available Rooms Overview</h3>
+
+            <div id="room-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <p class="text-gray-500 col-span-full">Loading room data...</p>
+            </div>
         </main>
     </div>
 
     <script>
+        const rooms = [
+            { id: 1, name: "Luxury King Suite", description: "Spacious suite with a king-size bed and sea view.", price: 299, capacity: 2, image: 'king-suite' },
+            { id: 2, name: "Standard Double Room", description: "Comfortable room with two double beds, city view.", price: 149, capacity: 4, image: 'double-room' },
+            { id: 3, name: "Budget Single Pod", description: "Compact room for solo travelers, great value.", price: 79, capacity: 1, image: 'single-pod' },
+            { id: 4, name: "Family Loft", description: "Two-bedroom loft perfect for families.", price: 349, capacity: 5, image: 'family-loft' },
+        ];
+        
+        const roomListElement = document.getElementById('room-list');
+
+        function renderRooms(roomArray) {
+            roomListElement.innerHTML = ''; 
+            roomArray.forEach(room => {
+                const roomCard = document.createElement('div');
+                roomCard.className = 'bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-2xl';
+                const imagePlaceholder = 'https://picsum.photos/400/250?random=' + room.id; 
+
+                roomCard.innerHTML = `
+                    <img src="${imagePlaceholder}" alt="${room.name}" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-indigo-600 mb-1">${room.name}</h3>
+                        <p class="text-gray-600 mb-3">${room.description}</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl font-extrabold text-gray-900">$${room.price}</span>
+                            <span class="text-sm text-gray-500">per night</span>
+                        </div>
+                        <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg">View/Book</button>
+                    </div>
+                `;
+                roomListElement.appendChild(roomCard);
+            });
+        }
+        
+        // Initial load
+        document.addEventListener('DOMContentLoaded', () => {
+             renderRooms(rooms); 
+        });
         // Simple JS for the mobile sidebar toggle
         const menuToggle = document.getElementById('menu-toggle');
         const sidebar = document.getElementById('sidebar');
